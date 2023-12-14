@@ -1,0 +1,55 @@
+version: "3.1"
+
+intents:
+  - bot_challenge
+  # STAGE 2
+  - person_birthplace
+  - person_profession
+  - person_date_of_birth
+  - person_nationality
+  - person_education
+  - person_known_for
+
+
+responses:
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+
+  utter_default:
+    - text: "I'm sorry, I didn't quite understand that. Can you rephrase or provide more details?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+entities:
+  - person
+  - location
+
+
+slots:
+  person:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: person
+
+  location:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: location
+
+  predicted_confidence_below_threshold:
+    type: bool
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+actions:
+- action_fetch_person_details
+- action_default_fallback
+- action_analyze_sales
+- action_describe_dataframe

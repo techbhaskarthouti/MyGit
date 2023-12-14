@@ -1,0 +1,146 @@
+# # # This files contains your custom actions which can be used to run
+# # # custom Python code.
+# # #
+# # # See this guide on how to implement these action:
+# # # https://rasa.com/docs/rasa/custom-actions
+
+
+# # # This is a simple example for a custom action which utters "Hello World!"
+
+# # # from typing import Any, Text, Dict, List
+# # #
+# # # from rasa_sdk import Action, Tracker
+# # # from rasa_sdk.executor import CollectingDispatcher
+# # #
+# # #
+# # # class ActionHelloWorld(Action):
+# # #
+# # #     def name(self) -> Text:
+# # #         return "action_hello_world"
+# # #
+# # #     def run(self, dispatcher: CollectingDispatcher,
+# # #             tracker: Tracker,
+# # #             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+# # #
+# # #         dispatcher.utter_message(text="Hello World!")
+# # #
+# # #         return []
+
+# # from typing import Any, Text, Dict, List
+# # from rasa_sdk import Action, Tracker
+# # from rasa_sdk.executor import CollectingDispatcher
+# # import json
+
+# # class ActionFetchPersonDetails(Action):
+
+# #     def name(self) -> Text:
+# #         return "action_fetch_person_details"
+
+# #     def run(self, dispatcher: CollectingDispatcher,
+# #             tracker: Tracker,
+# #             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+# #         # Get the person's name from the slot
+# #         person_name = tracker.get_slot("person")
+        
+# #         # Load the data from the JSON file
+# #         with open('C:\\Sketo\\BHASAKR\\RASA\\Data\\data_extended.json', 'r') as json_file:
+# #             data = json.load(json_file)
+        
+# #         # Fetch details for the given name
+# #         details = data.get(person_name, {"message": "Person not found in our database."})
+        
+# #         # Respond with the details
+# #         dispatcher.utter_message(text=str(details))
+
+# #         return []
+
+# from typing import Any, Text, Dict, List
+# from rasa_sdk import Action, Tracker
+# from rasa_sdk.executor import CollectingDispatcher
+# import json
+
+# class ActionFetchPersonDetails(Action):
+
+#     def name(self) -> Text:
+#         return "action_fetch_person_details"
+
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+#         # Get the person's name from the slot
+#         person_name = tracker.get_slot("person")
+        
+#         # Load the data from the JSON file
+#         with open('data_extended.json', 'r') as json_file:
+#             data = json.load(json_file)
+        
+#         # Fetch details for the given name
+#         details = data.get(person_name, {"message": "Person not found in our database."})
+        
+#         # Check if the user asked about a specific property
+#         last_message = tracker.latest_message.get('text').lower()
+        
+#         if "birthplace" in last_message or "born" in last_message:
+#             response = f"{person_name} was born in {details.get('birthplace', 'unknown place')}."
+#         elif "profession" in last_message:
+#             response = f"{person_name} is known as {details.get('profession', 'unknown profession')}."
+#         elif "date of birth" in last_message or "when was" in last_message:
+#             response = f"{person_name} was born on {details.get('date_of_birth', 'unknown date')}."
+#         elif "nationality" in last_message:
+#             response = f"{person_name} is {details.get('nationality', 'of unknown nationality')}."
+#         elif "education" in last_message:
+#             response = f"{person_name} studied at {details.get('education', 'unknown institution')}."
+#         elif "known for" in last_message:
+#             response = f"{person_name} is known for {details.get('known_for', 'unknown reasons')}."
+#         else:
+#             # General overview if no specific property was asked about
+#             response = f"{person_name} was born in {details.get('birthplace', 'unknown place')}, and is known as {details.get('profession', 'unknown profession')}."
+        
+#         # Respond with the details
+#         dispatcher.utter_message(text=response)
+
+#         return []
+
+# // STAGE 2
+from typing import Any, Text, Dict, List
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+import json
+
+class ActionFetchPersonDetails(Action):
+
+    def name(self) -> Text:
+        return "action_fetch_person_details"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        # Get the person's name from the slot
+        person_name = tracker.get_slot("person")
+        
+        # Load the data from the JSON file
+        with open('C:\\Sketo\\BHASAKR\\RASA\\Data\\data_extended.json', 'r') as json_file:
+            data = json.load(json_file)
+        
+        # Fetch details for the given name
+        details = data.get(person_name, {"message": "Person not found in our database."})
+        
+        # Check the intent and respond accordingly
+        last_intent = tracker.latest_message.get('intent').get('name')
+        
+        response = {
+            "person_birthplace": f"{person_name} was born in {details.get('birthplace', 'unknown place')}.",
+            "person_profession": f"{person_name} is known as {details.get('profession', 'unknown profession')}.",
+            "person_date_of_birth": f"{person_name} was born on {details.get('date_of_birth', 'unknown date')}.",
+            "person_nationality": f"{person_name} is {details.get('nationality', 'of unknown nationality')}.",
+            "person_education": f"{person_name} studied at {details.get('education', 'unknown institution')}.",
+            "person_known_for": f"{person_name} is known for {details.get('known_for', 'unknown reasons')}."
+        }.get(last_intent, f"{person_name} was born in {details.get('birthplace', 'unknown place')}, and is known as {details.get('profession', 'unknown profession')}.")
+        
+        # Respond with the details
+        dispatcher.utter_message(text=response)
+
+        return []

@@ -1,0 +1,149 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+# - intent: person_birth_place
+#   examples: |
+#     - [Barack Obama](person) was born in [Hawaii](location).
+#     - [George Washington](person) was born in [Westmoreland County](location).
+#     - The birthplace of [Leonardo da Vinci](person) is [Vinci](location).
+#     - [Albert Einstein](person) hailed from [Ulm](location).
+
+
+# STAGE 2:
+
+- intent: person_birthplace
+  examples: |
+    - Where was [Barack Obama](person) born?
+    - Tell me the birthplace of [Nelson Mandela](person).
+    - In which city was [Narendra Modi](person) born?
+    - Where is the hometown of [Leonardo da Vinci](person)?
+    - [Albert Einstein](person)'s birthplace?
+
+- intent: person_profession
+  examples: |
+    - What does [Barack Obama](person) do?
+    - Tell me the profession of [Nelson Mandela](person).
+    - What is [Narendra Modi](person) known for?
+    - What was the job of [Leonardo da Vinci](person)?
+    - [Albert Einstein](person)'s profession?
+
+- intent: person_date_of_birth
+  examples: |
+    - When was [Barack Obama](person) born?
+    - Tell me the birth date of [Nelson Mandela](person).
+    - On which date was [Narendra Modi](person) born?
+    - [Leonardo da Vinci](person)'s date of birth?
+    - Birthdate of [Albert Einstein](person)?
+
+- intent: person_nationality
+  examples: |
+    - What's the nationality of [Barack Obama](person)?
+    - Tell me the country of origin of [Nelson Mandela](person).
+    - Where is [Narendra Modi](person) from?
+    - [Leonardo da Vinci](person) belonged to which country?
+    - [Albert Einstein](person)'s nationality?
+
+- intent: person_education
+  examples: |
+    - Where did [Barack Obama](person) study?
+    - Tell me the educational background of [Nelson Mandela](person).
+    - Which university did [Narendra Modi](person) attend?
+    - [Leonardo da Vinci](person)'s education?
+    - Where was [Albert Einstein](person) educated?
+
+- intent: person_known_for
+  examples: |
+    - Why is [Barack Obama](person) famous?
+    - Tell me why [Nelson Mandela](person) is renowned.
+    - What's the main achievement of [Narendra Modi](person)?
+    - Main works of [Leonardo da Vinci](person)?
+    - Why do people know [Albert Einstein](person)?

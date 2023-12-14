@@ -1,0 +1,78 @@
+version: "3.1"
+
+intents:
+  # - greet
+  # - goodbye
+  # - affirm
+  # - deny
+  # - mood_great
+  # - mood_unhappy
+  - bot_challenge
+  #- person_birth_place STAGE 1
+  # STAGE 2
+  - person_birthplace
+  - person_profession
+  - person_date_of_birth
+  - person_nationality
+  - person_education
+  - person_known_for
+
+
+responses:
+  # utter_greet:
+  # - text: "Hey! How are you?"
+
+  # utter_cheer_up:
+  # - text: "Here is something to cheer you up:"
+  #   image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  # utter_did_that_help:
+  # - text: "Did that help you?"
+
+  # utter_happy:
+  # - text: "Great, carry on!"
+
+  # utter_goodbye:
+  # - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  # utter_person_birth_place:
+  # - text: "Yes, {person} was born in {location}."
+
+  utter_default:
+    - text: "I'm sorry, I didn't quite understand that. Can you rephrase or provide more details?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+entities:
+  - person
+  - location
+
+
+slots:
+  person:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: person
+
+  location:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: location
+
+  predicted_confidence_below_threshold:
+    type: bool
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+actions:
+- action_fetch_person_details
+- action_default_fallback

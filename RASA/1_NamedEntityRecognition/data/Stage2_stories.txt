@@ -1,0 +1,89 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+# - story: person birthplace story
+#   steps:
+#   - intent: person_birth_place
+#     entities:
+#     - person: "Barack"
+#     - location: "Hawaii"
+#   - action: utter_person_birth_place
+
+# - story: person birthplace story
+#   steps:
+#   - intent: person_birth_place
+#     entities:
+#     - person: "Barack"
+#     - location: "Hawaii"
+#   - action: action_fetch_person_details
+
+# STAGE 2:
+- story: ask about person's birthplace
+  steps:
+  - intent: person_birthplace
+    entities:
+    - person: "Barack Obama"
+  - action: action_fetch_person_details
+
+- story: ask about person's profession
+  steps:
+  - intent: person_profession
+    entities:
+    - person: "Nelson Mandela"
+  - action: action_fetch_person_details
+
+- story: ask about person's date of birth
+  steps:
+  - intent: person_date_of_birth
+    entities:
+    - person: "Narendra Modi"
+  - action: action_fetch_person_details
+
+- story: ask about person's nationality
+  steps:
+  - intent: person_nationality
+    entities:
+    - person: "Leonardo da Vinci"
+  - action: action_fetch_person_details
+
+- story: ask about person's education
+  steps:
+  - intent: person_education
+    entities:
+    - person: "Albert Einstein"
+  - action: action_fetch_person_details
+
+- story: ask what person is known for
+  steps:
+  - intent: person_known_for
+    entities:
+    - person: "Barack Obama"
+  - action: action_fetch_person_details

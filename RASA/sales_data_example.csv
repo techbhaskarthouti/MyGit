@@ -1,0 +1,101 @@
+Quarter,Age Group,Purchase Amount,Product Category,Specific Product,Time of Day
+Q1,55-64,448.14,Electronics,Smartphone,Morning
+Q1,55-64,455.25,Clothing,Other,Afternoon
+Q3,18-24,339.87,Sports,Other,Afternoon
+Q3,65+,163.13,Books,Other,Afternoon
+Q3,25-34,437.96,Home & Kitchen,Other,Morning
+Q2,45-54,134.47,Sports,Other,Afternoon
+Q1,55-64,242.09,Home & Kitchen,Other,Evening
+Q1,55-64,189.39,Sports,Other,Morning
+Q3,55-64,365.87,Electronics,Smartphone,Afternoon
+Q1,55-64,122.03,Sports,Other,Morning
+Q2,25-34,198.83,Electronics,Smartphone,Morning
+Q4,55-64,206.07,Electronics,Smartphone,Morning
+Q1,35-44,468.79,Sports,Other,Morning
+Q1,25-34,282.11,Electronics,Smartphone,Late Evening
+Q2,35-44,229.0,Sports,Other,Evening
+Q2,25-34,419.66,Books,Other,Late Evening
+Q2,55-64,450.08,Clothing,Other,Morning
+Q1,25-34,386.44,Clothing,Other,Late Evening
+Q2,65+,267.48,Sports,Other,Morning
+Q3,45-54,263.83,Electronics,Smartphone,Late Evening
+Q1,25-34,414.44,Sports,Other,Late Evening
+Q3,35-44,214.72,Books,Other,Evening
+Q1,18-24,173.05,Electronics,Smartphone,Morning
+Q1,18-24,249.02,Clothing,Other,Late Evening
+Q2,45-54,424.05,Books,Other,Afternoon
+Q2,45-54,73.74,Sports,Other,Afternoon
+Q1,18-24,422.01,Books,Other,Afternoon
+Q1,25-34,470.07,Clothing,Other,Afternoon
+Q4,55-64,260.65,Books,Other,Late Evening
+Q2,35-44,75.9,Home & Kitchen,Other,Afternoon
+Q3,25-34,437.82,Clothing,Other,Morning
+Q1,18-24,269.02,Electronics,Smartphone,Morning
+Q4,35-44,179.89,Home & Kitchen,Other,Late Evening
+Q2,55-64,480.64,Electronics,Smartphone,Morning
+Q3,55-64,284.53,Home & Kitchen,Other,Evening
+Q2,55-64,390.17,Electronics,Smartphone,Evening
+Q4,55-64,521.97,Books,Other,Morning
+Q3,35-44,424.24,Home & Kitchen,Other,Late Evening
+Q2,55-64,52.88,Clothing,Other,Afternoon
+Q4,55-64,328.31,Electronics,Smartphone,Afternoon
+Q2,55-64,319.8,Clothing,Other,Morning
+Q3,25-34,270.42,Electronics,Smartphone,Morning
+Q2,45-54,180.1,Books,Other,Evening
+Q2,35-44,426.28,Electronics,Smartphone,Morning
+Q2,35-44,467.31,Books,Other,Late Evening
+Q3,35-44,441.71,Clothing,Other,Morning
+Q1,65+,244.03,Sports,Other,Late Evening
+Q2,35-44,233.75,Home & Kitchen,Other,Late Evening
+Q1,45-54,187.8,Sports,Other,Late Evening
+Q3,65+,99.1,Books,Other,Evening
+Q4,55-64,229.23,Home & Kitchen,Other,Afternoon
+Q3,55-64,380.45,Electronics,Smartphone,Evening
+Q1,35-44,215.03,Electronics,Smartphone,Afternoon
+Q4,55-64,377.61,Electronics,Smartphone,Afternoon
+Q4,45-54,514.92,Clothing,Other,Evening
+Q3,55-64,273.58,Clothing,Other,Late Evening
+Q2,18-24,417.2,Books,Other,Late Evening
+Q2,18-24,108.91,Clothing,Other,Morning
+Q3,45-54,289.91,Books,Other,Morning
+Q4,35-44,531.37,Home & Kitchen,Other,Late Evening
+Q4,18-24,331.71,Clothing,Other,Late Evening
+Q1,18-24,317.29,Sports,Other,Evening
+Q2,25-34,440.11,Electronics,Smartphone,Afternoon
+Q4,25-34,417.29,Sports,Other,Late Evening
+Q1,55-64,294.54,Home & Kitchen,Other,Afternoon
+Q3,18-24,268.98,Books,Other,Late Evening
+Q3,65+,286.11,Sports,Other,Late Evening
+Q3,18-24,373.33,Clothing,Other,Late Evening
+Q2,55-64,117.4,Sports,Other,Morning
+Q2,35-44,216.9,Electronics,Smartphone,Afternoon
+Q2,65+,158.99,Home & Kitchen,Other,Late Evening
+Q1,18-24,450.27,Clothing,Other,Afternoon
+Q3,18-24,385.82,Books,Other,Morning
+Q4,65+,104.36,Books,Other,Morning
+Q4,65+,162.78,Home & Kitchen,Other,Evening
+Q2,18-24,92.13,Sports,Other,Evening
+Q2,65+,162.21,Books,Other,Late Evening
+Q3,65+,266.74,Clothing,Other,Late Evening
+Q4,35-44,306.79,Sports,Other,Morning
+Q1,35-44,213.44,Home & Kitchen,Other,Late Evening
+Q2,65+,415.75,Home & Kitchen,Other,Afternoon
+Q3,35-44,369.44,Sports,Other,Afternoon
+Q3,18-24,287.98,Home & Kitchen,Other,Evening
+Q1,65+,138.43,Clothing,Other,Late Evening
+Q4,45-54,371.38,Sports,Other,Late Evening
+Q4,65+,567.33,Sports,Other,Afternoon
+Q1,45-54,341.7,Clothing,Other,Afternoon
+Q4,45-54,102.37,Books,Other,Late Evening
+Q1,18-24,141.46,Electronics,Smartphone,Afternoon
+Q4,55-64,302.45,Electronics,Smartphone,Late Evening
+Q4,65+,261.41,Clothing,Other,Late Evening
+Q3,25-34,308.27,Electronics,Smartphone,Late Evening
+Q3,25-34,302.93,Home & Kitchen,Other,Afternoon
+Q3,45-54,393.28,Sports,Other,Afternoon
+Q4,65+,196.9,Electronics,Smartphone,Late Evening
+Q3,45-54,311.22,Books,Other,Morning
+Q3,65+,348.91,Books,Other,Afternoon
+Q1,18-24,408.39,Home & Kitchen,Other,Evening
+Q4,18-24,320.69,Electronics,Smartphone,Afternoon
+Q1,25-34,168.33,Books,Other,Evening

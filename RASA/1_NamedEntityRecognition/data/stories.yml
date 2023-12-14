@@ -1,0 +1,125 @@
+version: "3.1"
+
+stories:
+
+# STAGE 2:
+- story: ask about person's birthplace
+  steps:
+  - intent: person_birthplace
+    entities:
+    - person: "Barack Obama"
+  - action: action_fetch_person_details
+
+- story: ask about person's profession
+  steps:
+  - intent: person_profession
+    entities:
+    - person: "Nelson Mandela"
+  - action: action_fetch_person_details
+
+- story: ask about person's date of birth
+  steps:
+  - intent: person_date_of_birth
+    entities:
+    - person: "Narendra Modi"
+  - action: action_fetch_person_details
+
+- story: ask about person's nationality
+  steps:
+  - intent: person_nationality
+    entities:
+    - person: "Leonardo da Vinci"
+  - action: action_fetch_person_details
+
+- story: ask about person's education
+  steps:
+  - intent: person_education
+    entities:
+    - person: "Albert Einstein"
+  - action: action_fetch_person_details
+
+- story: ask what person is known for
+  steps:
+  - intent: person_known_for
+    entities:
+    - person: "Barack Obama"
+  - action: action_fetch_person_details
+
+
+- story: Ask about person then follow up with birthplace
+  steps:
+  - intent: person_birthplace
+    entities:
+    - person: "Albert Einstein"
+  - action: action_fetch_person_details
+  - slot_was_set:
+    - person: "Albert Einstein"
+  - intent: person_birthplace
+  - action: action_fetch_person_details
+
+- story: Ask about person then follow up with profession
+  steps:
+  - intent: person_profession
+    entities:
+    - person: "Narendra Modi"
+  - action: action_fetch_person_details
+  - slot_was_set:
+    - person: "Narendra Modi"
+  - intent: person_profession
+  - action: action_fetch_person_details
+
+- story: Ask about person then follow up with date of birth
+  steps:
+  - intent: person_date_of_birth
+    entities:
+    - person: "Albert Einstein"
+  - action: action_fetch_person_details
+  - slot_was_set:
+    - person: "Albert Einstein"
+  - intent: person_date_of_birth
+  - action: action_fetch_person_details
+
+- story: Ask about person then follow up with nationality
+  steps:
+  - intent: person_nationality
+    entities:
+    - person: "Narendra Modi"
+  - action: action_fetch_person_details
+  - slot_was_set:
+    - person: "Narendra Modi"
+  - intent: person_nationality
+  - action: action_fetch_person_details
+
+- story: Ask about person then follow up with education
+  steps:
+  - intent: person_education
+    entities:
+    - person: "Albert Einstein"
+  - action: action_fetch_person_details
+  - slot_was_set:
+    - person: "Albert Einstein"
+  - intent: person_education
+  - action: action_fetch_person_details
+
+- story: Ask about person then follow up with known for
+  steps:
+  - intent: person_known_for
+    entities:
+    - person: "Narendra Modi"
+  - action: action_fetch_person_details
+  - slot_was_set:
+    - person: "Narendra Modi"
+  - intent: person_known_for
+  - action: action_fetch_person_details
+
+
+- story: analyze sales story
+  steps:
+  - intent: analyze_sales
+  - action: action_analyze_sales
+
+
+- story: describe data story
+  steps:
+  - intent: describe_data
+  - action: action_describe_dataframe
